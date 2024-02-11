@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #f0f3fb;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 10px 10px 10px 0px rgba(173, 175, 169, 0.5);
+  width: 320px;
+  height: 350px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  width: 80%;
+  height: 15%;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  color: #fff;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.container button:nth-child(1) {
+  background-color: #22c55e;
+}
+
+.container button:nth-child(1):hover {
+  background-color: #0c8137;
+}
+
+
+.container button:nth-child(2) {
+  background-color: #3b82f6;
+}
+
+.container button:nth-child(2):hover {
+  background-color: #184794;
+}
+
+.container button:nth-child(3) {
+  background-color: #f97316;
+}
+
+.container button:nth-child(3):hover {
+  background-color: #914712;
+}
+
+
+.container button:nth-child(4) {
+  background-color: #ef4444;
+}
+
+.container button:nth-child(4):hover {
+  background-color: #981c1c;
+}
