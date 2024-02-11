@@ -30,7 +30,7 @@ function App() {
         toast.error("Error Toast Notification", options);
         break;
       default:
-        toast("Unknown Toast Notification", options);
+        throw new Error('Unknown Toast Notification!');
     }
   };
 
