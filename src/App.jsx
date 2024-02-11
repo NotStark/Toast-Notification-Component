@@ -5,9 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   // * Could use object
   function showToast(type) {
-    let toReturn;
     if (type === "success") {
-      toReturn = toast.success("Success Toast Notification", {
+      toast.success("Success Toast Notification", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -19,7 +18,7 @@ function App() {
         transition: Bounce,
       });
     } else if (type === "info") {
-      toReturn = toast.info("Info Toast Notification", {
+      toast.info("Info Toast Notification", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -31,7 +30,7 @@ function App() {
         transition: Bounce,
       });
     } else if (type === "warning") {
-      toReturn = toast.warn("Warning Toast Notification", {
+      toast.warn("Warning Toast Notification", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -43,7 +42,7 @@ function App() {
         transition: Bounce,
       });
     } else {
-      toReturn = toast.error("Error Toast Notification", {
+      toast.error("Error Toast Notification", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -55,7 +54,6 @@ function App() {
         transition: Bounce,
       });
     }
-    return toReturn
   }
   return (
     <>
