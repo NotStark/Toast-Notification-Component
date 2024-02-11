@@ -1,5 +1,5 @@
 import React from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       draggable: true,
       progress: undefined,
       theme: "light",
+      transition: Bounce,
     };
 
     switch (type) {
