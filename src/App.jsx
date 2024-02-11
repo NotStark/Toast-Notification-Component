@@ -1,60 +1,38 @@
 import React from "react";
-import { ToastContainer, toast, Bounce } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  // * Could use object
-  function showToast(type) {
-    if (type === "success") {
-      toast.success("Success Toast Notification", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
-    } else if (type === "info") {
-      toast.info("Info Toast Notification", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
-    } else if (type === "warning") {
-      toast.warn("Warning Toast Notification", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
-    } else {
-      toast.error("Error Toast Notification", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
+  const showToast = (type) => {
+    const options = {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    };
+
+    switch (type) {
+      case "success":
+        toast.success("Success Toast Notification", options);
+        break;
+      case "info":
+        toast.info("Info Toast Notification", options);
+        break;
+      case "warning":
+        toast.warn("Warning Toast Notification", options);
+        break;
+      case "error":
+        toast.error("Error Toast Notification", options);
+        break;
+      default:
+        toast("Unknown Toast Notification", options);
     }
-  }
+  };
+
   return (
     <>
       <div className="container">
